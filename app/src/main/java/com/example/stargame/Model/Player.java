@@ -19,11 +19,10 @@ public class Player {
     private final int MAX_SPEED = 20;
 
     public Player(Context context, int screenX, int screenY) {
-        x = 75;
+        x = 300;
         y = 50;
         speed = 1;
-        bitmap = BitmapFactory.decodeResource(context.getResources(),
-                R.drawable.bird);
+        bitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.bird);
 
         maxY = screenY - bitmap.getHeight();
         minY = 0;
@@ -68,4 +67,9 @@ public class Player {
     public void stopBoosting(){
         boosting = false;
     }
+
+    public void setX(int x) {
+        this.x = x;
+    }
 }
+

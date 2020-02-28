@@ -11,7 +11,8 @@ public class Enemy {
     private int minX;
     private int minY;
 
-    public Enemy(int screenX, int screenY) {
+
+    public Enemy (int screenX, int screenY){
         maxX = screenX;
         maxY = screenY;
         minX = 0;
@@ -22,7 +23,6 @@ public class Enemy {
         x = gen.nextInt(maxX);
         y = gen.nextInt(maxY);
     }
-
     public void Update(int speedPlayer){
         x -= speedPlayer;
         x -= speed;
@@ -34,11 +34,11 @@ public class Enemy {
         }
     }
 
-    public float getEnemyWight(){
-        float minX = 10.0f;
+    public float getEnemyWith(){
+        float minX = 50.0f;
         float maxX = 50.0f;
-        Random random = new Random();
-        float finalX = random.nextFloat()*(maxX-minX)+minX;
+
+        float finalX = maxX;
         return finalX;
     }
 
@@ -48,5 +48,9 @@ public class Enemy {
 
     public int getY() {
         return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
     }
 }

@@ -34,7 +34,7 @@ public class Star {
         }
     }
 
-    public float getStarWight(){
+    public float getStarWith(){
         float minX = 1.0f;
         float maxX = 4.0f;
         Random random = new Random();
